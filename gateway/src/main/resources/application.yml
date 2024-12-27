@@ -1,0 +1,22 @@
+server:
+  port: 9000
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG 
+spring:
+  cloud:
+    gateway:      
+        routes:
+        - id: gestor-tareas-route
+          uri: http://localhost:8081
+          predicates:
+            - Path=/gestor/api/tareas/**
+          filters:
+            - name: AddBearerTokenFilter
+        - id: gestor-usuarios-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/gestor/api/usuarios/** 
+          filters:
+            - name: AddBearerTokenFilter
+            
