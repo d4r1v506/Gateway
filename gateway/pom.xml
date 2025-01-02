@@ -11,7 +11,7 @@
 	<groupId>ec.edu.ups</groupId>
 	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>gateway</name>
 	<description>Api gateway para gestion de usuarios y tareas</description>
 	<url/>
@@ -71,6 +71,7 @@
 	</dependencyManagement>
 
 	<build>
+	<finalName>gateway</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

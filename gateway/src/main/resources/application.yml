@@ -8,13 +8,13 @@ spring:
     gateway:      
         routes:
         - id: gestor-tareas-route
-          uri: http://localhost:8081
+          uri: http://172.17.0.4:8081
           predicates:
             - Path=/gestor/api/tareas/**
           filters:
             - name: AddBearerTokenFilter
         - id: gestor-usuarios-route
-          uri: http://localhost:8082
+          uri: http://172.17.0.3:8082
           predicates:
             - Path=/gestor/api/usuarios/** 
           filters:

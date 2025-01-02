@@ -34,7 +34,7 @@ public class AddBearerTokenFilter extends AbstractGatewayFilterFactory<Object> {
             String body = "{\"username\":\"admin\",\"password\":\"admin123\"}";
             
             String tokenResponse = webClient.post()
-                .uri("http://localhost:8081/gestor/api/auth/getToken")
+                .uri("http://172.17.0.4:8081/gestor/api/auth/getToken")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(Mono.just(body), String.class)
                 .retrieve()
